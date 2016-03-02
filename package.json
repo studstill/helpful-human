@@ -1,0 +1,27 @@
+{
+  "name": "helpful-human-code-challenge-jason-studstill",
+  "version": "0.1.0",
+  "description": "Jason Studstill's Code Challenge for Helpful Human",
+  "main": "server.js",
+  "scripts": {
+    "test": "mocha-casperjs test/frontend-test.js"
+  },
+  "author": "Jason Studstill",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.5.2",
+    "babel-loader": "^6.2.3",
+    "babel-preset-es2015": "^6.5.0",
+    "babel-preset-react": "^6.5.0",
+    "gulp": "^3.9.1",
+    "gulp-webpack": "^1.5.0",
+    "webpack": "^1.12.13"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "express": "^4.13.4",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "superagent": "^1.8.0-beta.2"
+  }
+}
