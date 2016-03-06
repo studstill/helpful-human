@@ -1,0 +1,12 @@
+$btn-confirm-color: #C23750
+
+.btn-confirm
+  @extend .btn
+  @extend .btn-primary
+  background: $btn-confirm-color
+
+.btn-confirm:hover, .btn-confirm:focus, .btn-confirm:active, .btn-confirm.active, .open > .dropdown-toggle.btn-confirm
+  background: darken($btn-confirm-color, 15%)
+
+.btn-confirm:active:focus
+  background: darken($btn-confirm-color, 21.5%)
