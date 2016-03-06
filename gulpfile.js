@@ -6,10 +6,15 @@ const sass = require(`gulp-sass`);
 const sourcemaps = require(`gulp-sourcemaps`);
 const autoprefixer = require(`gulp-autoprefixer`);
 
-gulp.task(`webpack`, ['copyHtml'], () => {
-  return gulp.src(`${__dirname}/src/scripts/app.jsx`)
+const paths = {
+  scripts: [`${__dirname}/src/scripts/app.jsx`],
+  html: [`${__dirname}/src/*.html`],
+  stylesheets: [`${__dirname}/src/stylesheets/*.sass`]
+}
+
+gulp.task(`webpack`, () => {
+  return gulp.src(paths.scripts)
     .pipe(webpack({
-      watch: true,
       module: {
         loaders: [{test: /\.js/, exclude: /node_modules/, loader: "babel-loader"}]
       },
@@ -20,26 +25,27 @@ gulp.task(`webpack`, ['copyHtml'], () => {
     .pipe(gulp.dest(`public/scripts/`));
 });
 
-gulp.task('sass', function() {
-  return gulp.src(`${__dirname}/src/stylesheets/**/*.sass`)
+gulp.task(`sass`, () => {
+  return gulp.src(paths.stylesheets)
     .pipe(sass({
       errLogToConsole: true,
-      outputStyle: 'expanded'
-    }).on('error', sass.logError))
+      outputStyle: `expanded`
+    }).on(`error`, sass.logError))
     .pipe(sourcemaps.write())
     .pipe(autoprefixer({
-      browsers: ['last 2 versions', '> 5%', 'Firefox ESR']
+      browsers: [`last 2 versions`, `> 5%`, `Firefox ESR`]
     }))
     .pipe(gulp.dest(`public/css/`));
 });
 
-// gulp.task('sass:watch', function() {
-//   return gulp.watch('./**/*.sass', ['sass']);
-// });
-
 gulp.task(`copyHtml`, () => {
-  return gulp.src(`${__dirname}/src/*.html`)
-    .pipe(gulp.dest(`${__dirname}/public`))
+  return gulp.src(paths.html)
+    .pipe(gulp.dest(`public`))
 });
 
-gulp.task(`default`, [`copyHtml`, `sass`, `webpack`]);
+gulp.task(`watch`, () => {
+  gulp.watch(paths.scripts, [`webpack`]);
+  gulp.watch(paths.stylesheets, [`sass`])
+});
+
+gulp.task(`default`, [`copyHtml`, `webpack`, `sass`, `watch`]);
