@@ -24,27 +24,26 @@
            <div className="collapse navbar-collapse" id="navbar-collapse-1">
              <ul className="nav navbar-nav nav-tabs">
                <li>
-                 <a href="/details">
-                   Details
-                   <span className="glyphicon glyphicon-menu-right"></span>
+                 <a href="/details" className="active">
+                   <span>Details</span>
+                   <span>{`>`}</span>
                  </a>
                </li>
                <li>
                  <a href="/schedule">
-                   Schedule
-                   <span className="glyphicon glyphicon-menu-right"></span>
+                   <span>Schedule</span>
+                   <span>{`>`}</span>
                  </a>
                </li>
                <li>
                  <a href="/payment">
-                   Payment
-                 <span className="glyphicon glyphicon-menu-right"></span>
+                   <span>Payment</span>
+                   <span>{`>`}</span>
                  </a>
                </li>
                <li>
                  <a href="/confirm">
-                   Confirm
-                 <span className="glyphicon glyphicon-menu-right"></span>
+                   <span>Confirm</span>
                  </a>
                </li>
              </ul>

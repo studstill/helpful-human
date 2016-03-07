@@ -3,6 +3,8 @@
 //**********************************************
 
 $main-theme-color: #C23750 // red
+$link-text-color: #C7C2B9
+$active-link-color: #4784AD
 
 .navbar > h1, a, a:hover
   text-align: center
@@ -11,6 +13,7 @@ $main-theme-color: #C23750 // red
 
 .navbar > h1
   font-size: 1.75em
+  margin-bottom: 0
 
 .glyphicon-menu-right
   padding-left: 15px
@@ -25,6 +28,20 @@ $main-theme-color: #C23750 // red
   li
     float: none
     display: inline-block
+  li span
+    color: $link-text-color
+  li > a
+    padding: 22.5px 0
+  li > a > span
+    margin: 0 12.5px
+  li a:hover > span
+    color: darken($link-text-color, 15%)
+
+a.active > span:first-of-type
+  color: $active-link-color !important
+
+a.active > span:nth-of-type(2)
+  color: black
 
 button.navbar-toggle
   border: none
