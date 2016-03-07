@@ -11,7 +11,6 @@
    }
 
    toggleChecked(e) {
-     console.log(e.target.checked);
      this.setState({
        isChecked: !this.state.isChecked,
        hasFocus: ''
