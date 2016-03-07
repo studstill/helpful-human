@@ -26,7 +26,7 @@
          <form className="hhClassForm container-fluid">
              <div className="container-fluid form-horizontal" aria-label="...">
                <h2 className="form-row">Class Name</h2>
-               <input className="form-row" name="className" defaultValue="Hello World" autoFocus="true"></input>
+               <input className="form-row" id="classNameInput" name="className" placeholder="Hello World" autoFocus="true"></input>
                 <div className="form-inline recurrenceButtons radio-inline">
                   {/* Import RadioButton components below */}
                   <RadioButton id="radioButtonDaily" label="Daily" selectedValue={this.state.selectedValue} handleChange={this.handleRadioButton.bind(this)}/>
