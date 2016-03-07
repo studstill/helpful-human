@@ -4,7 +4,7 @@
   "description": "Jason Studstill's Code Challenge for Helpful Human",
   "main": "server.js",
   "scripts": {
-    "test": "mocha-casperjs test/frontend-test.js"
+    "start": "node server.js"
   },
   "author": "Jason Studstill",
   "license": "ISC",
