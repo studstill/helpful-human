@@ -12,7 +12,6 @@
      return (
        <div>
          <nav className="navbar navbar-default" role="navigation">
-           <h1><a href="/">Create a Class</a></h1>
            <div className="navbar-header pull-left">
              <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
                <span className="sr-only">Toggle navigation</span>
@@ -21,6 +20,7 @@
                <span className="icon-bar"></span>
              </button>
            </div>
+           <h1><a href="/">Create a Class</a></h1>
            <div className="collapse navbar-collapse" id="navbar-collapse-1">
              <ul className="nav navbar-nav nav-tabs">
                <li>

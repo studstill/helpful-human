@@ -6,6 +6,9 @@ $main-theme-color: #C23750 // red
 $link-text-color: #C7C2B9
 $active-link-color: #4784AD
 
+div.navbar-header.pull-left
+  margin: 10px 0
+
 .navbar > h1, a, a:hover
   text-align: center
   color: $main-theme-color
@@ -13,10 +16,7 @@ $active-link-color: #4784AD
 
 .navbar > h1
   font-size: 1.75em
-  margin-bottom: 0
-
-.glyphicon-menu-right
-  padding-left: 15px
+  margin-bottom: 20px
 
 // Set white space above red line
 .navbar.navbar-default
@@ -31,7 +31,7 @@ $active-link-color: #4784AD
   li span
     color: $link-text-color
   li > a
-    padding: 22.5px 0
+    padding: 0 0 22.5px 0
   li > a > span
     margin: 0 12.5px
   li a:hover > span
@@ -45,7 +45,8 @@ a.active > span:nth-of-type(2)
 
 button.navbar-toggle
   border: none
-  float: left
+  vertical-align: middle
+  line-height: normal
 
 .navbar.navbar-default
   background-color: white
