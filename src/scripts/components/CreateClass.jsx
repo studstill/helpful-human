@@ -26,7 +26,7 @@
          <form className="hhClassForm container-fluid">
              <div className="container-fluid form-horizontal" aria-label="...">
                <h2 className="form-row">Class Name</h2>
-               <input className="form-row" id="classNameInput" name="className" placeholder="Hello World" autoFocus="true"></input>
+               <input required className="form-row" id="classNameInput" name="className" placeholder="Hello World" autoFocus="true"></input>
                 <div className="form-inline recurrenceButtons radio-inline">
                   {/* Import RadioButton components below */}
                   <RadioButton id="radioButtonDaily" label="Daily" selectedValue={this.state.selectedValue} handleChange={this.handleRadioButton.bind(this)}/>
@@ -36,23 +36,25 @@
                 <div className="form-inline form-group">
                   {/* Import ToggleSwitch component below */}
                   <ToggleSwitch id="toggleSwitchPrivate" label="Private" text="Make this class private" className="pull-left"/>
-                  <input type="text" name="roomLocation" placeholder="Room Location" className="pull-right"/>
+                  <input required type="text" name="roomLocation" placeholder="Room Location" className="pull-right"/>
                 </div>
                 <div className="form-inline form-group">
-                  <input type="text" name="classType" placeholder="Class Type" className="pull-left"/>
-                  <input type="text" name="maximumAge" placeholder="Maximum Age" className="pull-right"/>
+                  <input required type="text" name="classType" placeholder="Class Type" className="pull-left"/>
+                  <input required type="number" name="maximumAge" placeholder="Maximum Age" className="pull-right"/>
                </div>
                <div className="form-inline form-group">
-                 <input type="text" name="minimumAge" type="text" pattern="\d*"  placeholder="Minimum Age" className="pull-left"/>
-                 <input type="text" name="maxClassSize" placeholder="Max Class Size" className="pull-right"/>
+                 <input required type="number" name="minimumAge" pattern="\d*"  placeholder="Minimum Age" className="pull-left"/>
+                 <input required type="number" name="maxClassSize" placeholder="Max Class Size" className="pull-right"/>
                </div>
                <div className="form-inline descriptionSection">
                  <span className="descriptionSpan">Description</span><br />
-                 <textarea name="descriptTextArea" rows="6"></textarea>
+                 <textarea required name="descriptTextArea" rows="6"></textarea>
                </div>
              </div>
            <div className="submitButtons text-center">
-             <button type="button" className="btn btn-cancel" data-toggle="modal" data-target="#cancelModal">Cancel</button>
+             {/* Modal currently implemented, but keeping the code for use later
+               <button type="button" className="btn btn-cancel" data-toggle="modal" data-target="#cancelModal">Cancel</button>*/}
+             <a href="/"><button type="button" className="btn btn-cancel">Cancel</button></a>
              <button type='submit' className="btn btn-confirm">Next Step</button>
            </div>
          </form>

@@ -24,25 +24,25 @@
            <div className="collapse navbar-collapse" id="navbar-collapse-1">
              <ul className="nav navbar-nav nav-tabs">
                <li>
-                 <a href="/details" className="active">
+                 <a href="/" className="active">
                    <span>Details</span>
                    <span>{`>`}</span>
                  </a>
                </li>
                <li>
-                 <a href="/schedule">
+                 <a href="/">
                    <span>Schedule</span>
                    <span>{`>`}</span>
                  </a>
                </li>
                <li>
-                 <a href="/payment">
+                 <a href="/">
                    <span>Payment</span>
                    <span>{`>`}</span>
                  </a>
                </li>
                <li>
-                 <a href="/confirm">
+                 <a href="/">
                    <span>Confirm</span>
                  </a>
                </li>
