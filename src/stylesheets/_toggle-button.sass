@@ -1,0 +1,67 @@
+// Modified version of code found here: http://www.designcouch.com/home/why/2013/09/19/ios7-style-pure-css-toggle/
+$interactive-input-color: #4783AD
+$radio-button-background-color: rgba(199, 194, 185, 1)
+
+//************************************
+//  Mixin invocations at the bottom
+//************************************
+
+=toggleSwitch($inputID, $inputLabel)
+  // Makes the html default checkbox disapear - functionality handled by "labels"
+  ##{$inputID}
+    max-height: 0
+    max-width: 0
+    opacity: 0
+    cursor: pointer
+
+  ##{$inputLabel}
+   display: inline-block
+   position: relative
+   box-shadow: inset 0 0 0px 1px $interactive-input-color
+   height: 30px
+   width: 60px
+   border-radius: 15px
+   cursor: pointer
+
+  ##{$inputLabel}:before
+   content: ""
+   position: relative
+   display: inline-block
+   height: 30px
+   width: 30px
+   top: 0
+   left: 0
+   border-radius: 15px
+   background: rgba(71, 131, 173, 0)
+   transition: .25s ease-in-out
+   cursor: pointer
+
+  ##{$inputLabel}:after
+   content: ""
+   margin: 2px
+   padding-left: 2px
+   position: absolute
+   display: inline-block
+   height: 25px
+   width: 25px
+   top: 0
+   left: 0
+   border-radius: 15px
+   background: #F6F3F0
+   box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .2), 0 2px 4px rgba(0, 0, 0, .2)
+   transition: .25s ease-in-out
+   cursor: pointer
+
+  ##{$inputID}:checked + ##{$inputLabel}:before
+    width: 60px
+    background: rgba(71, 131, 173, 1)
+
+  ##{$inputID}:checked + ##{$inputLabel}:after
+    left: 30px
+    box-shadow: 0 2px 4px rgba(0, 0, 0, .2)
+
+//************************************
+//  Mixin invocations below
+//************************************
+
++toggleSwitch('toggleSwitchPrivate', 'toggleSwitchPrivateLabel')

@@ -1,12 +1,47 @@
 $btn-confirm-color: #C23750
+$btn-cancel-color: white
 
-.btn-confirm
+.btn
+  width: 163.71px
+  height: 39.33px
+
+.submitButtons > .btn
+
+.btn.btn-cancel
+  @extend .btn
+  @extend .btn-primary
+  background: $btn-cancel-color
+  border: 1px solid #BDBAB7
+  background-color: white
+  color: #7A7977
+
+.btn.btn-cancel:hover,
+.btn.btn-cancel:focus,
+.btn.btn-cancel:active,
+.btn.btn-cancel.active,
+.open > .dropdown-toggle.btn.btn-cancel
+  border: 1px solid #BDBAB7
+  color: #7A7977
+  background: darken($btn-cancel-color, 5%)
+
+.btn.btn-cancel:active:focus
+  border: 1px solid #BDBAB7
+  color: #7A7977
+  background: darken($btn-cancel-color, 11.5%)
+
+.btn.btn-confirm
   @extend .btn
   @extend .btn-primary
   background: $btn-confirm-color
+  border: none
+  color: white
 
-.btn-confirm:hover, .btn-confirm:focus, .btn-confirm:active, .btn-confirm.active, .open > .dropdown-toggle.btn-confirm
-  background: darken($btn-confirm-color, 15%)
+.btn.btn-confirm:hover,
+.btn.btn-confirm:focus,
+.btn.btn-confirm:active,
+.btn.btn-confirm.active,
+.open > .dropdown-toggle.btn.btn-confirm
+  background: darken($btn-confirm-color, 5%)
 
-.btn-confirm:active:focus
-  background: darken($btn-confirm-color, 21.5%)
+.btn.btn-confirm:active:focus
+  background: darken($btn-confirm-color, 11.5%)
