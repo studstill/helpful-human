@@ -13,6 +13,7 @@
        <div>
          <nav className="navbar navbar-default" role="navigation">
            <div className="container">
+             <h1><a href="index.html">Create Class</a></h1>
              <div className="navbar-header list-inline">
                <button type="button" className="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
                  <span className="sr-only">Toggle navigation</span>
@@ -20,7 +21,6 @@
                  <span className="icon-bar"></span>
                  <span className="icon-bar"></span>
                </button>
-               <h3><a href="index.html">Create Class</a></h3><br/>
              </div>
              <div className="collapse navbar-collapse" id="navbar-collapse-1">
                <ul className="nav navbar-nav nav-tabs">

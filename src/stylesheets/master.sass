@@ -15,123 +15,30 @@ $focus-underline-color: #4784AD
   outline: none
   box-shadow: inset 0 -1px 0 0.99px $focus-underline-color
 
+// Define backround color and font stack
 body
   background-color: white
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
 
+// Match the spec for placeholder color in inputs
 input::placeholder
   color: $placeholder-text-color
 
-.glyphicon-menu-right
-  padding-left: 15px
+//**********************************************
+// Header/Nav Section
+//**********************************************
 
-// Set white space above red line
-.navbar.navbar-default
-  margin-top: 20px
+@import 'header-nav'
 
-a.navbar-brand
-  margin: auto
+//**********************************************
+// Main Form Section
+//**********************************************
 
-button.navbar-toggle
-  border: none
-  float: left
+@import 'new-class-form'
 
-.navbar.navbar-default
-  background-color: white
-  border-top: 4px solid #C23750
-  border-bottom: 1px solid rgba(0, 0, 0, .09)
-  border-radius: 0px
-  box-shadow: 0px 0px 2px lightgrey
-
-.nav.navbar-nav.nav-tabs
-  border-style: hidden
-  margin: 0 auto
-
-.nav-tabs li a
-  border: 0px
-  border-style: hidden
-
-.nav-tabs:hover
-  border: hidden
-
-// Set padding for elements in form-group class
-.form-group > *
-  margin: 10px 15px
-  padding-bottom: 5px
-
-.hhClassForm
-  max-width: 700px
-  margin: auto
-
-.hhClassForm input
-  border: none
-  border-bottom: 1px solid #ddd
-
-.form-row
-  width: 85%
-  font-size: 1.5em
-
-h2.form-row
-  font-size: 1.25em
-  text-align: left
-  color: #4784AD
-  margin-bottom: 5px
-
-.form-inline
-  margin: 25px 0
-
-.form-inline > *
-  width: 45%
-
-.form-inline > textarea
-  width: 100%
-  border-radius: 3px
-  border-color: #ddd
-
-input.pull-left
-  margin-right: 0
-
-input.pull-right
-  margin-left: 0
-
-
-div.form-inline.recurrenceButtons
-  margin: 1em 0
-
-.recurrenceButtons, .recurrenceButtons > *
-  padding-left: 0
-
-// Overwrites the width,
-.radio-inline.classOccurance
-  float: left
-  text-align: left
-  cursor: default
-  width: 100px
-  margin-right: 25px
-
-// Center the text spans vertically
-span.radioSpan, span.toggleSpan, #toggleSwitchPrivateLabel
-  display: inline-block
-  vertical-align: middle
-  line-height: normal
-  margin: 0
-
-// Set min-width for text to appear on same line
-.toggleSpan
-  min-width: 150px
-
-.radio-inline.toggleSwitch
-  cursor: default
-
-#toggleSwitchPrivateLabel
-  margin: 0 15px 0 10px
-
-.descriptionSection
-  color: $placeholder-text-color
-  margin-top: 35px
-
-.descriptionSection > textarea
-  margin-top: 12.5px
+//**********************************************
+// Submit Buttons for Each Page
+//**********************************************
 
 .submitButtons
   position: absolute
