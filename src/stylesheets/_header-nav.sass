@@ -2,6 +2,16 @@
 // Header/Nav Section
 //**********************************************
 
+$main-theme-color: #C23750 // red
+
+.navbar > h1, a, a:hover
+  text-align: center
+  color: $main-theme-color
+  text-decoration: none
+
+.navbar > h1
+  font-size: 1.75em
+
 .glyphicon-menu-right
   padding-left: 15px
 
@@ -9,13 +19,20 @@
 .navbar.navbar-default
   margin-top: 20px
 
+.navbar-nav
+  width: 100%
+  text-align: center
+  li
+    float: none
+    display: inline-block
+
 button.navbar-toggle
   border: none
   float: left
 
 .navbar.navbar-default
   background-color: white
-  border-top: 4px solid #C23750
+  border-top: 4px solid $main-theme-color
   border-bottom: 1px solid rgba(0, 0, 0, .09)
   border-radius: 0px
   box-shadow: 0px 0px 2px lightgrey
