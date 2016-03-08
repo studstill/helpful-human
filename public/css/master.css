@@ -8191,7 +8191,7 @@ span.radioSpan, span.toggleSpan, #toggleSwitchPrivateLabel {
 }
 
 .toggleSpan {
-  min-width: 150px;
+  min-width: 160px;
 }
 
 .radio-inline.toggleSwitch {
